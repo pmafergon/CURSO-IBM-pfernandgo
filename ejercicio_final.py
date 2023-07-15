@@ -1,37 +1,34 @@
-#Lo primero que hago es definir el tamaño de la matriz, para ello creo la variable n que es introducida por el usuario.
 
+lista=(1,2,3,4,5,6,7,8,9) #Creo la lista de donde saca los números de la matriz que se va a generar.
+import random   #Importo random para que lo seleccione aleatoriamente de la lista.
+matriz=[]   #Creo la lista matriz donde se van a incluir las sublistas.
+def creomatriz (n): #función que crea la matriz.
+    for i in range(n):  #bucle desde i hasta el valor ingresado por el usuario (filas) donde se generan las sublistas de la matriz.
+        fila=[] #variable que almacena las listas que después se incluyen en la variable matriz, esta variable es solo para la función.
+        for i in range(n):  #Bucle que genera los números aleatorios y lo incluye en la variable temporal, se repite generando n números aleatorios.
+            numero=(random.choice(lista))   
+            fila.append(numero) 
+        matriz.append(fila)    #finaliza el bucle de la sublista y se ingresa la lista como sublista de la matriz.
+    print (matriz)  #imprime la matriz en pantalla finalizado el bucle.
 
-"""while n>9 or n<1:
-    n = int(input("El número introducido no es correcto, por favor, ingrese un número del 1 al 9: "))"""
-lista=(1,2,3,4,5,6,7,8,9)
-import random
-matriz=[]
-def creomatriz (filas):
-    for i in range(filas):
-        fila=[]
-        for i in range(filas):
-            numero=(random.choice(lista))
-            fila.append(numero)
-        matriz.append(fila)    
-    print (matriz)
-
-filas=int(input("Ingresa un número del 1 al 9: "))
-bucle=True
-while bucle==True:
-    if 0<filas<=9:
+n=int(input("Ingresa un número del 1 al 100: ")) 
+bucle=True #Variable de control del bucle de que los números sean válidos entre 0 y 100 (me ha parecido buena idea acotar el tamaño de la matriz)
+while bucle==True:  
+    if 0<n<=100:
         bucle=False
     else:    
-        filas=int(input("Número incorrecto, por favor, ingrese un número del 1 al 9: "))
-creomatriz(filas)
-filaslist=[]
-columnlist=[]
+        n=int(input("Número incorrecto, por favor, ingrese un número válido: "))
 
-for i in range(filas):
-    sumafila=sum(matriz[i])
+creomatriz(n)   #llamo a la función que crea la matriz
+filaslist=[]    #lista que va a recoger la suma de las filas
+columnlist=[]   #lista que va a recoger la suma de las columnas
+
+for i in range(n):  #bucle para sumar las filas, desde i hasta el número que ha ingresado el usuario (número total de filas y columnas)
+    sumafila=sum(matriz[i]) #suma las sublistas, i es la que lleva el control de la sublista que se está generando
     filaslist.append(sumafila)
 print("La suma de las filas es: ", filaslist)
-for i in range (filas):
-    col=[row[i] for row in matriz]
-    columnlist.append(sum(col))
+for i in range (n): #bucle que suma las columnas, desde i hasta el número ingresado por el usuario
+    col=[row[i] for row in matriz]  #esta variable almacena a través del comando row una lista de las columnas de la matriz controladas por i (lo saqué literal de los apuntes) 
+    columnlist.append(sum(col)) #sumamos las listas creadas por row y las almacenamos en una nueva lista
 print("La suma de las columnas es: ", columnlist)    
 
