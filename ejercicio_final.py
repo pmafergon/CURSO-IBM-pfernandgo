@@ -1,5 +1,5 @@
 
-lista=list(range(1,10)) #Creo la lista de donde saca los números de la matriz que se va a generar.
+lista=list(range(0,10)) #Creo la lista de donde saca los números de la matriz que se va a generar.
 import random   #Importo random para que lo seleccione aleatoriamente de la lista.
 matriz=[]   #Creo la lista matriz donde se van a incluir las sublistas.
 def creomatriz (n): #función que crea la matriz.
