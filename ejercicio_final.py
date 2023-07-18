@@ -9,7 +9,7 @@ def creomatriz (n): #función que crea la matriz.
             numero=(random.choice(lista))   
             fila.append(numero) 
         matriz.append(fila)    #finaliza el bucle de la sublista y se ingresa la lista como sublista de la matriz.
-    for i in range(n): print(matriz[i], end="\n")  #imprime la matriz en pantalla finalizado el bucle.
+    for i in range(n): print(matriz[i], end="\n")  #imprime la matriz en pantalla, dejando un salto de linea después de cada sublista.
 
 n=int(input("Ingresa un número entero del 1 al 100: "))
 bucle=True #Variable de control del bucle de que los números sean válidos entre 0 y 100 (me ha parecido buena idea acotar el tamaño de la matriz)
