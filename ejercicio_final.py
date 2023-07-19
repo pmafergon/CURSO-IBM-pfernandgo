@@ -72,7 +72,7 @@ def definiendonxn():
 #Llamamiento a las funciones.
 otravez=True
 while otravez==True:
-    matriz.clear()
+    matriz.clear()  #limpio listas, por si no fuese la primera fase del programa
     filaslist.clear()
     columnlist.clear()
     definiendonxn() #Llamo a la función que define n
