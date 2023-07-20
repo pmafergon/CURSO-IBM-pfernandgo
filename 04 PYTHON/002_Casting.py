@@ -4,6 +4,7 @@ x = int(1)  	 # x Valdrá 1
 y = int(2.8) 	 # y Valdrá 2
 z = int("3") 	 # z Valdrá 3
 
+
 # Forzado de tipo Float:
 x = float(1)     # x Valdrá 1.0
 y = float(2.8)   # y Valdrá 2.8
@@ -18,7 +19,7 @@ z = str(3.0)     # z Valdrá '3.0'
 # CASTING. Reconversión de tipos:
 # Casting de int a float:
 n_numero = 13  
-n_numero_2 = float(n_numero)
+n_numero_2 = float(n_numero)        
 
 # Casting de float a int:
 n_numero_3 = 24.876

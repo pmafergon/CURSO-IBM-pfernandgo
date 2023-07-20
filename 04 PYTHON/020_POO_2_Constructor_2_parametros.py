@@ -5,13 +5,13 @@
 
 class Coche:
 
-    def __init__(self):  # Método constructor. double underscore = dunder
-        self.largo = 250
-        self.ancho = 120
-        self.ruedas = 4
-        self.peso = 900
-        self.color = "rojo"
-        self.is_enMarcha = False
+    def __init__(self, largo, ancho, ruedas, peso, color, is_enMarcha):  # Método constructor. double underscore = dunder
+        self.largo = largo
+        self.ancho = ancho
+        self.ruedas = ruedas
+        self.peso = peso
+        self.color = color
+        self.is_enMarcha = is_enMarcha
 
     # Declaración de métodos
     def arrancar(self):  # self hace referencia a la instancia de clase.
@@ -26,7 +26,7 @@ class Coche:
         # Declaración de una instancia de clase, objeto de clase o ejemplar de clase.
 
 
-miCoche = Coche()
+miCoche = Coche(250, 120, 4, 900, "rojo", False)
 
 # Acceso a un atributo de la clase Coche. Nomenclatura del punto.
 miCoche.ruedas = 7

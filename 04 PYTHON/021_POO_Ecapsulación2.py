@@ -2,32 +2,34 @@
 
 # CREACIÓN DE UNA CLASE
 
+class Persona:
+    def __init__(self, nombre, apellido, edad):
+        self._nombre = nombre
+        self.apellido = apellido
+        self.edad = edad
 
-class Coche:
-    # Método constructor
-    def __init__(self):
-        self.__largo = 250
-        self.__ancho = 120
-        self.__ruedas = 4
-        self.__peso = 900
-        self.__color = "rojo"
-        self.__is_enMarcha = False
+    @property
+    def nombre(self):
+        print('Llamando método get nombre')
+        return self._nombre
 
-    # Declaración de métodos
-    def arrancar(self):  # self hace referencia a la instancia de clase.
-        self.is_enMarcha = True  # Es como si pusiésemos miCoche.is_enMarcha = True
+    @nombre.setter
+    def nombre(self, nombre):
+        print('Llamando método set nombre')
+        self._nombre = nombre
 
-    def estado(self):
-        if (self.is_enMarcha == True):
-            return "El coche está arrancado"
-        else:
-            return "El coche está parado"
+    def mostrar_detalle(self):
+        print(f'Persona: {self._nombre} {self.apellido} {self.edad}')
 
-        # Declaración de una instancia de clase, objeto de clase o ejemplar de clase.
+    #Sin decoradores
 
 
-miCoche = Coche()
+    #def mostrar_detalle(self):
+    #    print(f'Persona: {self.nombre()} {self.apellido} {self.edad}')
 
-miCoche.__ruedas = 9
-print("Mi coche tiene", miCoche.__ruedas, "ruedas.")
 
+persona1 = Persona('Juan', 'Perez', 28)
+persona1.nombre = 'Juan Carlos'
+print(persona1.nombre)
+# persona1._nombre = 'Cambio'
+# print(persona1._nombre)

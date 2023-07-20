@@ -12,8 +12,8 @@ En Python, los diccionarios se escriben entre llaves y tienen claves y valores.
 #   Declaración de un diccionario
 
 miDiccionario = {
-  "brand": "Ford",
-  "model": "Mustang",
+  "Marca": "Ford",
+  "Modelo": "Mustang",
   "year": 1964
 }
 print(miDiccionario)

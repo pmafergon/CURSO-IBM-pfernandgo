@@ -10,6 +10,7 @@ n_edad = 47
 n_numero = -23.5245
 
 # Declaración de variable de tipo string:
+
 s_nombre = 'Manolo es "amigo" mío'
 
 # Declaración de variable de tipo string en varias líneas:
@@ -17,8 +18,10 @@ s_textoLargo = """Esto es un mensaje
 ...con tres saltos
 ...de linea"""
 
+print(s_textoLargo)
+
 # Sobreescribimos el valor de la variable s_edad y ahora la ponemos como string:
-s_edad = "47"
+s_edad = 2345
 
 # Declaración de constante:
 NUMEROPI = 3.14159
@@ -26,6 +29,7 @@ NUMEROPI = 3.14159
 # Declaración de un boolean
 is_verdadero = True
 is_casado = False
+
 
 # True = 1 y False = 0
 True == 1
@@ -37,6 +41,8 @@ print(True + 2)
 print(10 > 9)
 print(10 == 9)
 print(10 < 9)
+
+
 
 # Declaración múltiple
 # En una sola instrucción, estamos declarando tres variables: a, b y c, y asignándoles un valor concreto a cada una.
@@ -56,3 +62,5 @@ print(type(s_nombre))
 print(type(NUMEROPI))
 print(type(is_verdadero))
 print(type(is_casado))
+
+

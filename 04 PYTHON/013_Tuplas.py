@@ -17,8 +17,14 @@ print(miTupla[1])
 miTupla = tuple(("manzana", "banana", "cereza"))
 print(miTupla)
 
-
+# El código  generará un error de tipo TypeError:
+# TypeError: 'tuple' object does not support item assignment
 #   Indexación Negativa
+
+mi_tupla = (1, 2, 3)
+mi_tupla[0] = 4  # Intentamos modificar el primer elemento de la tupla
+
+
 
 miTupla = ("manzana", "banana", "cereza")
 print(miTupla[-1])
@@ -33,6 +39,7 @@ print(miTupla[2:5])
 
 miTupla = ("manzana", "banana", "cereza")
 miLista = list(miTupla)
+print(miLista)
 miLista[1] = "kiwi"
 miTupla = tuple(miLista)
 
